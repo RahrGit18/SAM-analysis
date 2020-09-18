@@ -1,10 +1,9 @@
 clear; close all; clc
 
 
-functionality = input('0:Max, 1:Min and 2:Threshold. Enter your functionality: ');  
+functionality = input('0:Max, 1:Min. Enter your functionality: ');  
                     %0 = Max
                     %1 = Min
-                    %2 = Threshold
                     
 filename = "data/";
 
@@ -34,12 +33,9 @@ for x = x_array(1):length(x_array)
                 [z, time] = max(data);    
             case 1
                 [z, time] = min(data);
-            case 2
-                z = 10;
         end
         
-        z_array(x,y) = z;
-       
+        z_array(x,y) = z;      
         
     end
     
